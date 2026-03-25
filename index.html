@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Artist Who Painted with Passion</title>
+    <link rel="stylesheet" href="yap.css">
+</head>
+<body>
+    <header>
+        <div class="logo">DANIEL CAESAR</div>
+        <nav> 
+            <ul id="navMenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#Biography">Biography</a></li>
+                <li><a href="#works">Masterpieces</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        
+        
+    </header>
+
+    <main class="cover">
+        <div class="hero-text">
+            <h1>DANIEL CAESAR</h1>
+            <p>From Toronto to the World</p>
+            <a href="#Biography" class="btn">Discover His Music</a>
+        </div>
+    </main>
+
+    <section class="content" id="Biography">
+        <div class="Biography">
+            <h1>BIOGRAPHY</h1>
+        </div>
+        <div class="box">
+            <div class="box1">
+                <h2>Early Life & Beginnings</h2>
+                <p>Born Ashton Simmonds on April 5, 1995, in Oshawa, Ontario, Daniel Caesar grew up in a religious household and began singing in church. After leaving home as a teenager to pursue music, he released early EPs like Praise Break (2014), building a loyal fanbase through raw, heartfelt songwriting.</p>
+            </div>
+            <div class="box2">
+                <h2>Breakthrough & Acclaim</h2>
+                <p>With his debut album Freudian (2017), Daniel achieved global recognition. The album earned him a Grammy Award for Best R&B Performance for 'Best Part' (featuring H.E.R.), and tracks like 'Get You' and 'Blessed' solidified his place as a leading voice in modern R&B.</p>
+            </div>
+            <div class="box3">
+                <h2>Artistic Evolution</h2>
+                <p>His follow-up albums Case Study 01 (2019) and Never Enough (2023) showcased growth in sound and themes of self-discovery. He continues to collaborate with artists across genres and use his platform to advocate for social justice and mental health awareness.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="works" id="works">
+        <div class="works-text">
+            <h1>MASTERPIECES</h1>
+            <p>Van Gogh's Iconic Works</p>
+        </div>
+        <div class="gallery">
+            <div class="albums">
+                <div class="starry-night">
+                    <h1>Performing</h1>
+                </div>
+                <div class="sunflower">
+                    <h1>Case Study 01</h1>
+                </div>
+                <div class="terrace">
+                    <h1>Best Part</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>A platform dedicated to celebrating the life and artistry of Daniel Caesar  one of R&B’s most influential voices. Our mission is to highlight his musical achievements, introspective songwriting, and impact on modern music and culture.</p>
+                <p> Through this site, we aim to inspire fans and showcase how his work continues to resonate with listeners worldwide.</p>
+                <button target="_blank" onclick="ReadMore()">Read More</button>
+            </div>
+            <div class="about-image">
+                <img src="Talbums.jpg" >
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contacts">
+        <div class="contact-content">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to learn more about Daniel Caesar’s music and projects? Reach out to us!</p>
+            <form>
+                <input type="text" placeholder="Your Name.." required>
+                <input type="email" placeholder="Your Email.." required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button id="send" type="submit">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <br>
+                <p><a target="_blank" href="https://danielcaesar.store/">Daniel Caesar Store</a></p>
+                <p>Official Streaming: <a target="_blank" href="https://open.spotify.com/artist/20wkVLutqVOYrc0kxFs7rA">Spotify</a></p>
+                <p>Instagram: <a target="_blank" href="https://www.instagram.com/danielcaesar/">danielCaesar</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Daniel Caesar Music Hub. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        const navLinks = document.querySelectorAll('#navMenu li a');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+        
+        
+        let send = document.getElementById('send')
+        
+        send.addEventListener('click', () => {
+            alert("Message sent successfully! Thank you for reaching out to us.")
+        })
+
+
+        function ReadMore(){
+           window.open("https://www.billboard.com/music/music-news/daniel-caesar-praises-tyler-the-creator-justin-bieber-1236029129/", "_blank")
+        }
+        
+    </script>
+</body>
+</html>
